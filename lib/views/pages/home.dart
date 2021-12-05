@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rate_my_app/views/pages/dashboard.dart';
+import 'package:rate_my_app/views/pages/tabs/dashboard.dart';
+import 'package:rate_my_app/views/pages/login/intro_page.dart';
+import 'package:rate_my_app/views/pages/tabs/profile_page.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -27,6 +29,10 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.search),
             label: 'جستجو',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'پروفایل',
+          ),
         ],
         onTap: (selectedIndex) {
           setState(() {
@@ -40,8 +46,8 @@ class _HomeState extends State<Home> {
 
   _body() {
     if (_currentIndex == 0) return DashboardPage();
-    if (_currentIndex == 1) return Container();
-    // if (_currentIndex == 2) return Container();
+    if (_currentIndex == 1) return IntroPage();
+    if (_currentIndex == 2) return ProfilePage();
     // if (_currentIndex == 3) return Container();
   }
 }

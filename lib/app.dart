@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:rate_my_app/views/pages/home.dart';
+import 'package:rate_my_app/views/pages/login/intro_page.dart';
 
 class App extends StatelessWidget {
   // This widget is the root of your application.
@@ -30,9 +31,9 @@ class App extends StatelessWidget {
         // is not restarted.
         fontFamily: "NotoSans",
 
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: Home(),
+      home: IntroPage(),
     );
   }
 }

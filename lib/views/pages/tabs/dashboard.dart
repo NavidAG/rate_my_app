@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rate_my_app/views/pages/add_new_app_page.dart';
 import 'package:rate_my_app/views/widgets/app_tile.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -14,6 +15,17 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("داشبورد"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddNewAppPage(),
+            ),
+          );
+        },
+        child: Icon(Icons.add),
       ),
       body: Container(
         child: ListView(

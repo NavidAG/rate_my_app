@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:rate_my_app/views/pages/metrics/comparison_page.dart';
+import 'package:rate_my_app/views/pages/metrics/metric_page.dart';
+import 'package:rate_my_app/views/pages/metrics/poll_page.dart';
+import 'package:rate_my_app/views/pages/metrics/ranking_page.dart';
 
 class AddNewAppPage extends StatefulWidget {
   const AddNewAppPage({Key? key}) : super(key: key);
@@ -198,12 +202,35 @@ class _AddNewAppPageState extends State<AddNewAppPage> {
                         borderRadius: BorderRadius.circular(10))),
                 child: Text("ثبت"),
                 onPressed: () {
-                  // Navigator.pushReplacement(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => Home(),
-                  //   ),
-                  // );
+                  if (switchValue1) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MetricPage(),
+                      ),
+                    );
+                  } else if (switchValue4) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PollPage(),
+                      ),
+                    );
+                  } else if (switchValue2) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ComparisonPage(),
+                      ),
+                    );
+                  } else if (switchValue5) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RankingPage(),
+                      ),
+                    );
+                  }
                 },
               ),
             ),
